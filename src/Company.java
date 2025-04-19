@@ -1,7 +1,6 @@
 import java.util.*;
 
 public class Company {
-
     private List<Employee> employees = new ArrayList<>();
     private double income;
 
