@@ -6,9 +6,9 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
         Company yandex = new Company();
-        Manager manager = new Manager(yandex);
-        TopManager topManager = new TopManager(yandex);
-        Operator operator = new Operator(yandex);
+        Manager manager = new Manager(yandex, 85000);
+        TopManager topManager = new TopManager(yandex, 150000);
+        Operator operator = new Operator(yandex, 70000);
         yandex.setIncome(16000000);
         List<Employee> listEmployees = new ArrayList<>();
 
@@ -26,17 +26,17 @@ public class Main {
         yandex.fire(operator);
 
         for (int i = 1; i < 180; i++) {
-            Employee newOperator = new Operator(yandex);
+            Employee newOperator = new Operator(yandex, 70000);
             yandex.hire(newOperator);
         }
 
         for (int i = 1; i < 80; i++) {
-            Employee newManager = new Manager(yandex);
+            Employee newManager = new Manager(yandex, 85000);
             yandex.hire(newManager);
         }
 
         for (int i = 1; i < 10; i++) {
-            Employee newTopManager = new TopManager(yandex);
+            Employee newTopManager = new TopManager(yandex, 150000);
             yandex.hire(newTopManager);
         }
 

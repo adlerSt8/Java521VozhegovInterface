@@ -1,8 +1,10 @@
 public class TopManager implements Employee{
     private Company company;
+    private int fixSalary;
 
-    public TopManager(Company company) {
+    public TopManager(Company company, int fixSalary) {
         this.company = company;
+        this.fixSalary = fixSalary;
     }
 
     @Override
