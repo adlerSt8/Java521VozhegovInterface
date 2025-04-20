@@ -18,7 +18,7 @@ public class Company {
     }
 
     public List<Employee> getLowestSalaryStaff(int count) {
-        if (count < 0 || count > employees.size()) {
+        if (count <= 0 || count > employees.size()) {
             return new ArrayList<>();
         } else {
             List<Employee> sorted = new ArrayList<>(employees);
